@@ -6,9 +6,15 @@ namespace Game.scripts.character.systems
 {
     public class HealthSystem : MonoBehaviour
     {
-        [SerializeField] private CharacterStats characterStats;
+        public int MaxHealth { get; private set; } = 4;
+        public int CurrentHealth { get; private set; }
         public event Action OnDeath;
         public bool IsAlive { get; private set; }
+
+        private void Awake()
+        {
+            CurrentHealth = MaxHealth;
+        }
 
         private void OnCollisionEnter(Collision collision)
         {
@@ -20,10 +26,10 @@ namespace Game.scripts.character.systems
 
         private void TakeDamage(int damage)
         {
-            var health = characterStats.CurrentHealth - damage;
-            characterStats.CurrentHealth = Mathf.Max(0, health);
+            var health = CurrentHealth - damage;
+            CurrentHealth = Mathf.Max(0, health);
             
-            if (characterStats.CurrentHealth == 0)
+            if (CurrentHealth == 0)
                 OnDeath?.Invoke();
         }
     }

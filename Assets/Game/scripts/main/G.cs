@@ -17,7 +17,7 @@ namespace Game.scripts
 
         public void StartGame()
         {
-            CharacterStats.Stats.InitializeStartStats();
+            //CharacterStats.Stats.InitializeStartStats();
         }
     }
 }

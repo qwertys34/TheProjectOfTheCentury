@@ -10,18 +10,27 @@ namespace Game.scripts.enemes
         //public event Action OnDie;
         
         public int enemyDamage = 1;
-        public int health = 3;
+        private int _maxHealth = 3;
+        private int _currentHealth;
+
+        private void Awake()
+        {
+            _currentHealth = _maxHealth;
+        }
 
         public int GetDamage() => enemyDamage;
+
+        public int GetMaxHealth() => _maxHealth;
+        public int GetCurrentHealth() => _currentHealth;
 
         public void TakeDamage(int damage) 
         {
             Debug.Log("Enemy damaged");
+            var calculatedHealth = Mathf.Max(0, _currentHealth - damage);
+            _currentHealth = calculatedHealth;
             OnDamageTaken?.Invoke();
-            var calculatedHealth = Mathf.Max(0, health - damage);
-            health = calculatedHealth;
-            Debug.Log("enemy health: " + health);
-            if (health == 0)
+            Debug.Log("enemy health: " + _currentHealth);
+            if (_currentHealth == 0)
             {
                 SetDisable();
             }

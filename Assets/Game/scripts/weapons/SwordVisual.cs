@@ -29,14 +29,14 @@ namespace Game.scripts
         private void AnimateWeaponRight()
         {
             //if (Inputs.InputReader.ConsumeAction(InputActionType.Attack))
-            Debug.Log("Attack right");
+            //Debug.Log("Attack right");
             animator.SetTrigger(IsAttackRight);
         }
         
         private void AnimateWeaponLeft()
         {
             //if (Inputs.InputReader.ConsumeAction(InputActionType.Attack))
-            Debug.Log("Attack left");
+            //Debug.Log("Attack left");
             animator.SetTrigger(IsAttackLeft);
         }
 

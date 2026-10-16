@@ -15,11 +15,14 @@ namespace Game.scripts.enemes
         private WaitForSeconds _waitForSeconds;
         private Coroutine _coroutine;
         
+        public Color color;
+        
         private void Awake()
         {
             _enemy = gameObject.GetComponentInParent<Enemy>();
             _baseMaterial = GetComponent<Renderer>().material;
             _waitForSeconds = new WaitForSeconds(flashDuration);
+            _baseMaterial.color = color;
         }
 
         private void Start()
