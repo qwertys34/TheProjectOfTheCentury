@@ -224,7 +224,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.scripts.enemes.EnemyVisual
   takeDamageColor: {r: 1, g: 1, b: 1, a: 0}
   flashDuration: 0.06
-  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &50372083
 GameObject:
   m_ObjectHideFlags: 0
@@ -6502,6 +6501,22 @@ PrefabInstance:
       propertyPath: material
       value: 
       objectReference: {fileID: 3985446568560994304, guid: e1b9afd5adbf8a747bbfcf8bd31999c5, type: 3}
+    - target: {fileID: 2298720022190263390, guid: 6983f74eb676a274bb6ecb00e1532e86, type: 3}
+      propertyPath: tempColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298720022190263390, guid: 6983f74eb676a274bb6ecb00e1532e86, type: 3}
+      propertyPath: tempColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298720022190263390, guid: 6983f74eb676a274bb6ecb00e1532e86, type: 3}
+      propertyPath: tempColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298720022190263390, guid: 6983f74eb676a274bb6ecb00e1532e86, type: 3}
+      propertyPath: flashDuration
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6184269059976236521, guid: 6983f74eb676a274bb6ecb00e1532e86, type: 3}
       propertyPath: m_Name
       value: PS1_Skeleton
